@@ -1,15 +1,17 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
+
 export default function Links() {
   const [dropRegister, setDropRegister] = useState(false);
   const [dropList, setDropList] = useState(false);
+
   return (
     <ul className='flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-5 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700'>
       <li>
         <Link
           href='/'
-          className='block py-2 px-3 text-gray-800 hover:scale-105 rounded md:bg-transparent md:p-0 font-semibold text-lg transition-all duration-e00'
+          className='block py-2 px-3 text-gray-800 hover:scale-105 rounded md:bg-transparent md:p-0 font-semibold text-lg transition-all duration-300'
           aria-current='page'
         >
           Home
@@ -43,7 +45,7 @@ export default function Links() {
           id='dropdownNavbar'
           className={`z-20 ${
             dropList ? '' : 'hidden'
-          } absolute  font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
+          } absolute font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
         >
           <div className='divide-y-2 w-full bg-gray-100 text-lg text-gray-800 font-medium'>
             <div className='p-2 hover:scale-105 transition-all duration-300'>
@@ -51,6 +53,9 @@ export default function Links() {
             </div>
             <div className='p-2 hover:scale-105 transition-all duration-300'>
               <Link href='/positions'>Position</Link>
+            </div>
+            <div className='p-2 hover:scale-105 transition-all duration-300'>
+              <Link href='/hierarchy'>Employee Hierarchy</Link>
             </div>
           </div>
         </div>
@@ -83,7 +88,7 @@ export default function Links() {
           id='dropdownNavbar'
           className={`z-20 ${
             dropRegister ? '' : 'hidden'
-          } absolute  font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
+          } absolute font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
         >
           <div className='divide-y-2 w-full bg-gray-100 text-lg text-gray-800 font-medium'>
             <div className='p-2 hover:scale-105 transition-all duration-300'>
@@ -92,10 +97,12 @@ export default function Links() {
             <div className='p-2 hover:scale-105 transition-all duration-300'>
               <Link href='/positions/add'>Add Position</Link>
             </div>
+            <div className='p-2 hover:scale-105 transition-all duration-300'>
+              <Link href='/hierarchy/add'>Add Employee Hierarchy</Link>
+            </div>
           </div>
         </div>
       </li>
-
       <li>
         <Link
           href='/about'
