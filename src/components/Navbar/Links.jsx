@@ -45,8 +45,7 @@ export default function Links() {
           id='dropdownNavbar'
           className={`z-20 ${
             dropList ? '' : 'hidden'
-          } absolute font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
-        >
+          } absolute font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}>
           <div className='divide-y-2 w-full bg-gray-100 text-lg text-gray-800 font-medium'>
             <div className='p-2 hover:scale-105 transition-all duration-300'>
               <Link href='/employees'>Employees</Link>
@@ -55,7 +54,7 @@ export default function Links() {
               <Link href='/positions'>Position</Link>
             </div>
             <div className='p-2 hover:scale-105 transition-all duration-300'>
-              <Link href='/hierarchy'>Employee Hierarchy</Link>
+              <Link href='/hierarchical'>Hierarchical</Link>
             </div>
           </div>
         </div>
