@@ -96,9 +96,7 @@ export default function Links() {
             <div className='p-2 hover:scale-105 transition-all duration-300'>
               <Link href='/positions/add'>Add Position</Link>
             </div>
-            <div className='p-2 hover:scale-105 transition-all duration-300'>
-              <Link href='/hierarchy/add'>Add Employee Hierarchy</Link>
-            </div>
+  
           </div>
         </div>
       </li>
